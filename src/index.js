@@ -12,9 +12,9 @@ app.get('/', (req, res) => {
   });
 });
 
-app.get('/test2c', (req, res) => {
+app.get('/test3a', (req, res) => {
 
-	res.send(canonize(req.query.username));
+	
 
 })
 
