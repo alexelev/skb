@@ -46,14 +46,10 @@ function convertHSLtoHEX (str) {
 
 function createColor(str) {
 	let data = str.toLowerCase().replace(/\s/g, '');
-	console.log(1);
-	console.log(data);
 	if (isRGB(data)){
 		data = convertRGBtoHEX(data);
 	} else if (isHSL(data)) {
-		console.log(2);
 		data = convertHSLtoHEX(data);
-		console.log(data);
 	} else {
 		data = data.indexOf('%') == 0 ? decodeURIComponent(data) : data;
 	}
