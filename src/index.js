@@ -57,15 +57,9 @@ function createColor(str) {
 	} else {
 		data = data.indexOf('%') == 0 ? decodeURIComponent(data) : data;
 	}
-	data = data !== null && data.indexOf('#') == 0 ? data.slice(1) : data;		
-	// const colorPattern = new RegExp('[0-9a-f]{3,6}', 'i');
-	// const antiColorPattern = new RegExp('[^0-9a-f]', 'i');
+	data = data !== null && data.indexOf('#') == 0 ? data.slice(1) : data;
 	
-
 	const isValid = !/[^0-9a-f]/i.test(data);
-	/*if (!/^(rg(b|ba)|hs(l|la))\(/.test(data) && data.length > 6) {
-		return 'Invalid color';
-	} else */
 
 	if (isValid && data.length == 3) {
 		return `#${data.charAt(0)}${data.charAt(0)}${data.charAt(1)}${data.charAt(1)}${data.charAt(2)}${data.charAt(2)}`;
